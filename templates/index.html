@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block main %}
+                <div class="section">
+                    <h1>Hello there, by clicking on Editor you can edit form</h1>
+                    <h3>Here are the responses of people</h3>
+                    <table class="table">
+                        <tr>
+                            {% for names in names %}
+                                <th>{{ names['name'] }}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for responses in responses %}
+                        <tr>
+                            <td>{{ responses["1"] }}</td>
+                            <td>{{ responses["2"] }}</td>
+                            <td>{{ responses["3"] }}</td>
+                            <td>{{ responses["4"] }}</td>
+                            <td>{{ responses["5"] }}</td>
+                            <td>{{ responses["6"] }}</td>
+                            <td>{{ responses["7"] }}</td>
+                            <td>{{ responses["8"] }}</td>
+                            <td>{{ responses["9"] }}</td>
+                            <td>{{ responses["10"] }}</td>
+
+                        </tr>
+                        {% endfor %}
+                    </table>
+            </div>
+{% endblock %}
